@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Main Activity Layout
+    Contains:
+    - A ConstraintLayout as the root container.
+    - A RadioGroup with RadioButton options ("Red", "Blue", "Green").
+    - A FrameLayout whose background color updates dynamically based on the selected RadioButton's text.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#C3B0EF"
+    tools:context=".MainActivity">
+
+    <!-- RadioGroup for color selection options -->
+    <RadioGroup
+        android:id="@+id/Rad_group"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/btred"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Red" />
+
+        <RadioButton
+            android:id="@+id/btblue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blue" />
+
+        <RadioButton
+            android:id="@+id/btgreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Green" />
+    </RadioGroup>
+
+    <!-- FrameLayout whose background color changes according to the selected RadioButton -->
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="294dp"
+        android:layout_height="251dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Rad_group">
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
