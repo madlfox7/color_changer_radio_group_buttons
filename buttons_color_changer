@@ -1,0 +1,48 @@
+package com.example.mybuts_0;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    Button red, green, blue;
+    TextView tv;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        red = findViewById(R.id.red);
+        green = findViewById(R.id.green);
+        blue = findViewById(R.id.blue);
+        tv = findViewById(R.id.tv);
+
+        red.setOnClickListener(this);
+        green.setOnClickListener(this);
+        blue.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId())
+        {
+            case R.id.red:
+                tv.setBackgroundColor(Color.RED);
+                break;
+            case R.id.green:
+                tv.setBackgroundColor(Color.GREEN);
+                break;
+            case R.id.blue:
+                tv.setBackgroundColor(Color.BLUE);
+                break;
+        }
+    }
+}
